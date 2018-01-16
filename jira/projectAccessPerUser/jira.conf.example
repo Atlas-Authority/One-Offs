@@ -1,0 +1,10 @@
+# Written by Boris Berenberg
+
+# Credentials should be for a Sysadmin account
+[credentials]
+username: admin@example.com 
+password: password123 
+
+# Do not include a trailing /
+[instance]
+baseUrl: https://jira.example.com

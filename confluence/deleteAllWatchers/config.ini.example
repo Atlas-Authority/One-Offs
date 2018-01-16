@@ -1,0 +1,7 @@
+# Make sure you leave a space after the :
+[credentials]
+username: admin
+password: SECRET
+[system]
+# Don't put a trailing slash
+url: https://confluence.example.com
