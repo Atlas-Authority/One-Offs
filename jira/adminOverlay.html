@@ -1,0 +1,31 @@
+<!-- Update the background color and transparency as you need.
+Green: (0,100,0, .12)
+Red: (100,0,0, .12)
+-->
+
+<style>
+#admin-overlay{
+  pointer-events: none;
+  background: rgba(0,100,0, .12); 
+  position:fixed !important;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index: 11;
+}
+</style>
+
+<script>
+// First check the local UI element to reduce number of requests to server
+if($("#system-admin-menu").length){
+  // Get user permissions
+  $.get( "/rest/api/2/mypermissions", function( data ) {
+    // Validate that user has either admin or sysadmin and then append the overlay
+    if( data.permissions.SYSTEM_ADMIN.havePermission || data.permissions.ADMINISTER.havePermission){
+      $("#page").append( "<div id='admin-overlay'></div>" );
+    }
+  });
+}
+</script>
