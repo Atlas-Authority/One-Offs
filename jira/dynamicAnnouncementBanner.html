@@ -1,0 +1,25 @@
+<div class="dynamicProjectKey"></div>
+
+<script>
+$(document).ready(function () { 
+	let pkey = ""
+	if (document.location.pathname.match("/([A-Z]+)-")[1]){
+		pkey = document.location.pathname.match("/([A-Z]+)-")[1]
+		console.log(1)
+	}
+	else if (document.location.search.match("projectKey=([A-Z]+)")[1]){
+		pkey = document.location.search.match("projectKey=([A-Z]+)")[1]
+		console.log(2)
+	}
+	else if (document.location.pathname.match("/projects/([A-Z]+)")[1]){
+		pkey = document.location.pathname.match("/projects/([A-Z]+)")[1]
+		console.log(3)
+	}
+
+	let targetProjects = ["PE", "PI", "COA", "KB", "CI"]
+
+	if (targetProjects.includes(pkey)){
+		$(".dynamicProjectKey")[0].innerText = pkey
+	}
+})
+</script>
