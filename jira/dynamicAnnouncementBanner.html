@@ -1,5 +1,7 @@
 <!-- Example usage -->
+This projects key is: <div class="dynamicProjectKey"></div>
 Remember that your content has moved to: https://example.com/jira/projects/<div class="dynamicProjectKey"></div>
+
 
 <script>
 $(document).ready(function () { 
@@ -17,7 +19,9 @@ $(document).ready(function () {
 	let targetProjects = ["ABC", "DEF", "GHI"]
 
 	if (targetProjects.includes(pkey)){
-		$(".dynamicProjectKey")[0].innerText = pkey
+		$(".dynamicProjectKey").each( function(index, element){ 
+			$(this)[0].innerText = pkey 
+		})
 	}
 })
 </script>
