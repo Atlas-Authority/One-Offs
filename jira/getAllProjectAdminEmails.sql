@@ -11,7 +11,7 @@ JOIN cwd_user u ON u.lower_user_name = au.user_key
 UNION
 
 --Users in roles
-SELECT p.pname as projectkey, u.lower_email_address as emails
+SELECT p.pkey as projectkey, u.lower_email_address as emails
 FROM projectroleactor pra
 INNER JOIN projectrole pr ON pr.ID = pra.PROJECTROLEID
 INNER JOIN project p ON p.ID = pra.PID
@@ -20,10 +20,10 @@ INNER JOIN cwd_user u ON u.lower_user_name = au.user_key
 WHERE pr.NAME = 'Administrators'
 AND pra.roletype = 'atlassian-user-role-actor'
 
-UNION ALL
+UNION
 
 --Groups in roles
-SELECT p.pname as projectkey, u.lower_email_address as emails
+SELECT p.pkey as projectkey, u.lower_email_address as emails
 from projectroleactor pra
 INNER JOIN projectrole pr ON pr.ID = pra.PROJECTROLEID
 INNER JOIN project p ON p.ID = pra.PID
@@ -36,7 +36,7 @@ AND pr.NAME = 'Administrators'
 UNION
 
 --Direct users in permission schemes
-select p.pname as projectkey, u.lower_email_address as emails
+select p.pkey as projectkey, u.lower_email_address as emails
 from project p
 JOIN nodeassociation na ON p.id = na.source_node_id
 JOIN schemepermissions sp ON na.sink_node_id = sp.scheme
@@ -50,7 +50,7 @@ UNION
 
 --Direct groups in permission schemes
 
-select p.pname as projectkey, u.lower_email_address as emails
+select p.pkey as projectkey, u.lower_email_address as emails
 from project p
 JOIN nodeassociation na ON p.id = na.source_node_id
 JOIN schemepermissions sp ON na.sink_node_id = sp.scheme
