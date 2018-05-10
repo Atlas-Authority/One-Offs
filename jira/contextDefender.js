@@ -4,8 +4,8 @@ var contextDefender = function(){
 	return confirm("Are you sure you want to delete this context?");
 }
 
-$( document ).ready(function() {
-  $('[title="Delete Scheme"]').each(function(index,element){
+AJS.$( document ).ready(function() {
+  AJS.$('[title="Delete Scheme"]').each(function(index,element){
   	element.onclick=contextDefender;
   })
 });
