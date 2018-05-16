@@ -6,7 +6,7 @@ url = 'http://localhost:2990/jira/rest/api/2/user'
 request_headers = {
   "X-Atlassian-Token": "nocheck",
   "Content-Type": "application/json",
-  "Authorization": "Basic YWRtaW41209387lkadhjsk62346973YWRtaW4=" #Figure out your own for this bit
+  "Authorization": "Basic YWRtaW46YWRtaW4=" #Figure out your own for this bit
  }
 
 for x in range(0, 10000):
