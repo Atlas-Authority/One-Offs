@@ -1,4 +1,4 @@
-// This works for Bitbucket and GitHub, but has not been tested with GitHub Enterprise.
+// This works for Bitbucket, GitHub, and  GitHub Enterprise.
 
 // Get your repo list 
 curl --request GET \
