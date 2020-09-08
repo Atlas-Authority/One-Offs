@@ -1,4 +1,6 @@
 """
+Built for python3
+
 This generator is intended to work with the 
 output of the following SQL (postgres) at the bottom of this file 
 """
