@@ -1,6 +1,6 @@
 /*
 
-Copy source field to destination field in Bulk
+Copy source User Picker field to destination field in Bulk
 
 Last tested on Jira 8.13.3
 
