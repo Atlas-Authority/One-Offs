@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 
-let url = 'https://example.atlassian.net/wiki/rest/api/space?expand=permissions';
+let url = 'https://example.atlassian.net/wiki/rest/api/space?expand=permissions&limit=2147483647';
 let username = 'username';
 let password = 'make sure to use an API key not a password';
 
