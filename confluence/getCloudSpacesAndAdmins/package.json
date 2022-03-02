@@ -9,6 +9,6 @@
   "author": "Atlas Authority",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^3.2.1"
+    "node-fetch": "^2.0.0"
   }
 }

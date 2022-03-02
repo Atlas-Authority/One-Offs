@@ -23,7 +23,7 @@ fetch(url, {
   .then(response => {
     const results = response.results;
 
-    console.log("space_key,space_name,admin_display_name,user_type")
+    console.log("space_key,space_name,space_status,admin_display_name,user_type")
 
     for (r in results){
 
@@ -37,7 +37,7 @@ fetch(url, {
 
         if (permission.operation.operation == 'administer' && permission.operation.targetType == 'space' && permission.subjects.user){
 
-            console.log(result.key + "," + result.name + "," + permission.subjects.user.results[0].displayName + ',' + permission.subjects.user.results[0].accountType)
+            console.log(result.key + "," + result.name + "," + result.status + "," + permission.subjects.user.results[0].displayName + ',' + permission.subjects.user.results[0].accountType)
           
         }
       }
