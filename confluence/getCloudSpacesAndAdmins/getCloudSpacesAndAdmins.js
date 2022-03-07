@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 let baseUrl = 'https://example.atlassian.net/wiki/rest/api/space?expand=permissions';
 let username = 'username';
 let password = 'make sure to use an API key not a password';
-let url = 'https://atlasauthority.atlassian.net/wiki/rest/api/space?expand=permissions';
+let url = 'https://example.atlassian.net/wiki/rest/api/space?expand=permissions';
 
 
 let start = 0;
